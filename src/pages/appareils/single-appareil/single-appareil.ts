@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NavParams} from "ionic-angular";
+import {NavParams, ViewController} from "ionic-angular";
 
 @Component({
   selector: 'page-single-appareil',
@@ -7,12 +7,17 @@ import {NavParams} from "ionic-angular";
 })
 export class SingleAppareilPage implements OnInit{
 
-  name: string;
-  constructor( public navParams: NavParams) {
+  appareil:{
+    name:string;
+    description:string[]
+  }
+  constructor( public navParams: NavParams,private viewCtrl:ViewController) {
   }
 
   ngOnInit(){
-    this.name=this.navParams.get('appareilName');
+    this.appareil=this.navParams.get('appareil');
   }
-
+  dismissModal(){
+    this.viewCtrl.dismiss();
+  }
 }
