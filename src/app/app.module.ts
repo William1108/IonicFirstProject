@@ -14,6 +14,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {SingleAppareilPage} from "../pages/appareils/single-appareil/single-appareil";
 import {SettingsPage} from "../pages/settings/settings";
+import {AppareilsService} from "../services/appareils.service";
+import {OptionsPage} from "../pages/options/options";
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import {SettingsPage} from "../pages/settings/settings";
     AppareilsPage,
     SingleAppareilPage,
     SettingsPage,
+    OptionsPage
 
   ],
   imports: [
@@ -41,9 +44,11 @@ import {SettingsPage} from "../pages/settings/settings";
     TabsPage,
     AppareilsPage,
     SingleAppareilPage,
-    SettingsPage
+    SettingsPage,
+    OptionsPage
   ],
   providers: [
+    AppareilsService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
