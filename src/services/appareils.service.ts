@@ -9,7 +9,9 @@ export class AppareilsService{
         'Temps de lavage: 2 heures',
         'Consomation: 135 kWh/an'
       ],
-      isOn:true
+      isOn:true,
+      startTime: '',
+      endTime:''
     },
     {
       name:'Lavabo',
@@ -17,7 +19,9 @@ export class AppareilsService{
         'Dimension: 40 pouces',
         'Consomation: 22 kWh/an'
       ],
-      isOn:true
+      isOn:true,
+      startTime: '',
+      endTime:''
     },
     {
       name:'Ordinateur',
@@ -25,8 +29,14 @@ export class AppareilsService{
         'Marque: Asus',
         'Consomation: 500 kWh/an'
       ],
-      isOn:false
+      isOn:false,
+      startTime: '',
+      endTime:''
     }
   ];
+
+  addAppareil(appareil: Appareil){
+    this.appareilsList.push(appareil);
+  }
 }
 

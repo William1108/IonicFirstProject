@@ -16,6 +16,7 @@ import {SingleAppareilPage} from "../pages/appareils/single-appareil/single-appa
 import {SettingsPage} from "../pages/settings/settings";
 import {AppareilsService} from "../services/appareils.service";
 import {OptionsPage} from "../pages/options/options";
+import {AppareilFormPage} from "../pages/appareil-form/appareil-form";
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {OptionsPage} from "../pages/options/options";
     AppareilsPage,
     SingleAppareilPage,
     SettingsPage,
-    OptionsPage
+    OptionsPage,
+    AppareilFormPage
 
   ],
   imports: [
@@ -45,7 +47,8 @@ import {OptionsPage} from "../pages/options/options";
     AppareilsPage,
     SingleAppareilPage,
     SettingsPage,
-    OptionsPage
+    OptionsPage,
+    AppareilFormPage
   ],
   providers: [
     AppareilsService,
